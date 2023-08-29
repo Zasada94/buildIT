@@ -11,7 +11,10 @@
     "next": "12.0.7",
     "nprogress": "^0.2.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-photo-album": "^2.3.0",
+    "styled-components": "^6.0.7",
+    "yet-another-react-lightbox": "^3.12.1"
   },
   "devDependencies": {
     "@types/node": "17.0.8",
