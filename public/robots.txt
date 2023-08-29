@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buildit-warszawa.pl
+
+# Sitemaps
+Sitemap: https://buildit-warszawa.pl/sitemap.xml
