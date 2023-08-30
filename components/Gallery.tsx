@@ -26,7 +26,7 @@ const Gallery = () => {
 			<section
 				className="banner-header banner-img valign bg-img bg-fixed"
 				data-overlay-light="3"
-				style={{ backgroundImage: "url(/img/banner.jpg)" }}
+				style={{ backgroundImage: "url(img/banner.jpg)" }}
 			></section>
 			<AllWrapper>
 				<section className="gallery">
