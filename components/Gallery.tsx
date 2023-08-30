@@ -9,6 +9,10 @@ import "yet-another-react-lightbox/styles.css";
 import slides from "../data/slides";
 import { styled } from "styled-components";
 
+const AllWrapper = styled.div`
+	max-width: 1140px;
+	margin: 0 auto;
+`;
 const Wrapper = styled.section`
 	z-index: 2;
 `;
@@ -24,42 +28,43 @@ const Gallery = () => {
 				data-overlay-light="3"
 				style={{ backgroundImage: "url(/img/banner.jpg)" }}
 			></section>
-
-			<section className="gallery">
-				<div className="container">
-					<div className="row">
-						<div
-							className="col-md-6 animate-box"
-							data-animate-effect="fadeInUp"
-						>
-							<h2 className="section-title">Galeria</h2>
+			<AllWrapper>
+				<section className="gallery">
+					<div className="container">
+						<div className="row">
+							<div
+								className="col-md-6 animate-box"
+								data-animate-effect="fadeInUp"
+							>
+								<h2 className="section-title">Galeria</h2>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			<Wrapper>
-				<PhotoAlbum
-					layout="rows"
-					photos={slides}
-					targetRowHeight={150}
-					onClick={({ index: current }) => setIndex(current)}
-				/>
+				</section>
+				<Wrapper>
+					<PhotoAlbum
+						layout="rows"
+						photos={slides}
+						targetRowHeight={150}
+						onClick={({ index: current }) => setIndex(current)}
+					/>
 
-				<Lightbox
-					index={index}
-					slides={slides}
-					open={index >= 0}
-					close={() => setIndex(-1)}
-				/>
-			</Wrapper>
-			<Container className="content-wrapper">
-				<Lines className="content-lines-wrapper">
-					<div className="content-lines-inner">
-						<div className="content-lines"></div>
-					</div>
-				</Lines>
-				<Footer />
-			</Container>
+					<Lightbox
+						index={index}
+						slides={slides}
+						open={index >= 0}
+						close={() => setIndex(-1)}
+					/>
+				</Wrapper>
+				<Container className="content-wrapper">
+					<Lines className="content-lines-wrapper">
+						<div className="content-lines-inner">
+							<div className="content-lines"></div>
+						</div>
+					</Lines>
+					<Footer />
+				</Container>
+			</AllWrapper>
 		</>
 	);
 };
