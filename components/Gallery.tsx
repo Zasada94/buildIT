@@ -8,6 +8,7 @@ import "yet-another-react-lightbox/styles.css";
 
 import slides from "../data/slides";
 import { styled } from "styled-components";
+import Slider from "./Slider";
 
 const AllWrapper = styled.div`
 	max-width: 1140px;
@@ -21,6 +22,7 @@ const Lines = styled.section``;
 
 const Gallery = () => {
 	const [index, setIndex] = React.useState(-1);
+
 	return (
 		<>
 			<section
@@ -36,12 +38,16 @@ const Gallery = () => {
 								className="col-md-6 animate-box"
 								data-animate-effect="fadeInUp"
 							>
-								<h2 className="section-title">Galeria</h2>
+								<h2 className="section-title">Nasze realizacje</h2>
 							</div>
 						</div>
 					</div>
 				</section>
 				<Wrapper>
+					<Slider />
+					<div>
+						<h3 style={{ color: "black", marginTop: "50px" }}>Inwestycja 1</h3>
+					</div>
 					<PhotoAlbum
 						layout="rows"
 						photos={slides}

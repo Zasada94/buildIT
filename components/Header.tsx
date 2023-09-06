@@ -126,6 +126,17 @@ const Header = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
+								<Link href="/galeria">
+									<a
+										className={`${baseClassNames}${
+											pathname === "/galeria" ? " active" : ""
+										}`}
+									>
+										Nasze realizacje
+									</a>
+								</Link>
+							</li>
+							<li className="nav-item">
 								<Link href="/kontakt">
 									<a
 										className={`${baseClassNames}${
@@ -133,17 +144,6 @@ const Header = () => {
 										}`}
 									>
 										Kontakt
-									</a>
-								</Link>
-							</li>
-							<li className="nav-item">
-								<Link href="/galeria">
-									<a
-										className={`${baseClassNames}${
-											pathname === "/galeria" ? " active" : ""
-										}`}
-									>
-										Galeria
 									</a>
 								</Link>
 							</li>

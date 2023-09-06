@@ -9,7 +9,7 @@ const Galeria: NextPage = () => {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Galeria - Build it</title>
+				<title>Realizacje - Build it</title>
 			</Head>
 
 			<Header />
