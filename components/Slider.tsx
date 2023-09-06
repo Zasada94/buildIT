@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,9 +9,14 @@ import "swiper/css/pagination";
 const Slider = () => {
 	useEffect(() => {
 		const swiper = new Swiper(".swiper", {
-			modules: [Navigation, Pagination],
+			modules: [Navigation, Pagination, Autoplay],
 			// Swiper configuration options go here
 			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
