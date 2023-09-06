@@ -126,10 +126,10 @@ const Header = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link href="/galeria">
+								<Link href="/realizacje">
 									<a
 										className={`${baseClassNames}${
-											pathname === "/galeria" ? " active" : ""
+											pathname === "/realizacje" ? " active" : ""
 										}`}
 									>
 										Nasze realizacje

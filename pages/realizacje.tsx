@@ -5,7 +5,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Footer from "components/Footer";
 
-const Galeria: NextPage = () => {
+const Realizacje: NextPage = () => {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -21,4 +21,4 @@ const Galeria: NextPage = () => {
 	);
 };
 
-export default Galeria;
+export default Realizacje;
