@@ -29,27 +29,79 @@ const Slider = () => {
 	}, []);
 
 	return (
-		<div className="swiper">
+		<div className="swiper" style={{ maxWidth: "1140px" }}>
 			<div className="swiper-wrapper">
 				<div className="swiper-slide">
-					<img src="/img/slider/1.jpg" alt="" />
+					<p
+						className="slide_title"
+						style={{
+							marginTop: "50px",
+							marginLeft: "15px",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "35px",
+							color: " White",
+						}}
+					>
+						Poznań
+					</p>
+					<img src="/img/gallery/swiper/poznan.jpg" alt="" />
 				</div>
 				<div className="swiper-slide">
-					<img src="/img/slider/2.jpg" alt="" />
+					<p
+						className="slide_title"
+						style={{
+							marginTop: "50px",
+							marginLeft: "15px",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "35px",
+							color: " White",
+						}}
+					>
+						Wilanów
+					</p>
+					<img src="/img/gallery/swiper/wilanow.jpg" alt="" />
 				</div>
 				<div className="swiper-slide">
-					<img src="/img/slider/3.jpg" alt="" />
-				</div>
-				<div className="swiper-slide">
-					<img src="/img/slider/4.jpg" alt="" />
+					<p
+						className="slide_title"
+						style={{
+							marginTop: "50px",
+							marginLeft: "15px",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "35px",
+							color: " White",
+						}}
+					>
+						Stefanowo
+					</p>
+					<img src="/img/gallery/swiper/stefanowo.jpg" alt="" />
 				</div>
 			</div>
 			{/* <!-- If we need pagination --> */}
 			<div className="swiper-pagination"></div>
 
 			{/* <!-- If we need navigation buttons --> */}
-			<div className="swiper-button-prev"></div>
-			<div className="swiper-button-next"></div>
+			<div
+				className="swiper-button-prev"
+				style={{
+					color: "white",
+				}}
+			></div>
+			<div
+				className="swiper-button-next"
+				style={{
+					color: "white",
+				}}
+			></div>
 		</div>
 	);
 };

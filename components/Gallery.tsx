@@ -2,7 +2,7 @@ import Link from "next/link";
 import Footer from "./Footer";
 import * as React from "react";
 
-import PhotoAlbum from "react-photo-album";
+import { PhotoAlbum, RenderPhotoProps } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -14,8 +14,14 @@ const AllWrapper = styled.div`
 	max-width: 1140px;
 	margin: 0 auto;
 `;
+
 const Wrapper = styled.section`
 	z-index: 2;
+`;
+
+const InnerWrapper = styled.div`
+	padding: 0 20px;
+	max-width: 1140px;
 `;
 const Container = styled.div``;
 const Lines = styled.section``;
@@ -49,6 +55,23 @@ const Gallery = () => {
 		{ src: `/img/gallery/wilanow/5.jpg`, width: 768, height: 1024 },
 	];
 
+	const renderPhoto = React.useCallback(
+		({ imageProps: { alt, style, ...rest } }: RenderPhotoProps) => (
+			<img
+				alt={alt}
+				style={{
+					...style,
+					borderRadius: "4px",
+					boxShadow:
+						"0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
+					transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+				}}
+				{...rest}
+			/>
+		),
+		[]
+	);
+
 	return (
 		<>
 			<section
@@ -72,65 +95,85 @@ const Gallery = () => {
 				<Wrapper>
 					<Slider />
 					{/* //inwestycja poznan */}
-					<div>
-						<h3
-							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
-						>
-							Inwestycja Poznań
-						</h3>
-					</div>
-					<PhotoAlbum
-						layout="rows"
-						photos={poznanGallery}
-						targetRowHeight={150}
-						onClick={({ index: current }) => setIndex(current)}
-					/>
-					<Lightbox
-						index={index}
-						slides={poznanGallery}
-						open={index >= 0}
-						close={() => setIndex(-1)}
-					/>
-					{/* //inwestycja stefanowo */}
-					<div>
-						<h3
-							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
-						>
-							Inwestycja Stefanowo
-						</h3>
-					</div>
-					<PhotoAlbum
-						layout="rows"
-						photos={stefanowoGallery}
-						targetRowHeight={150}
-						onClick={({ index: current }) => setIndex2(current)}
-					/>
-					<Lightbox
-						index={index2}
-						slides={stefanowoGallery}
-						open={index2 >= 0}
-						close={() => setIndex2(-1)}
-					/>
-					{/* //inwestycja wilanow */}
-					<div>
-						<h3
-							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
-						>
-							Inwestycja Wilanów
-						</h3>
-					</div>
-					<PhotoAlbum
-						layout="rows"
-						photos={wilanowGallery}
-						targetRowHeight={150}
-						onClick={({ index: current }) => setIndex3(current)}
-					/>
-					<Lightbox
-						index={index3}
-						slides={wilanowGallery}
-						open={index3 >= 0}
-						close={() => setIndex3(-1)}
-					/>
+					<InnerWrapper>
+						<div>
+							<h3
+								style={{
+									color: "black",
+									marginTop: "50px",
+									marginLeft: "15px",
+								}}
+							>
+								Inwestycja Poznań
+							</h3>
+						</div>
+
+						<PhotoAlbum
+							layout="rows"
+							photos={poznanGallery}
+							targetRowHeight={220}
+							spacing={20}
+							padding={30}
+							onClick={({ index: current }) => setIndex(current)}
+							renderPhoto={renderPhoto}
+						/>
+						<Lightbox
+							index={index}
+							slides={poznanGallery}
+							open={index >= 0}
+							close={() => setIndex(-1)}
+						/>
+						{/* //inwestycja stefanowo */}
+						<div>
+							<h3
+								style={{
+									color: "black",
+									marginTop: "50px",
+									marginLeft: "15px",
+								}}
+							>
+								Inwestycja Stefanowo
+							</h3>
+						</div>
+						<PhotoAlbum
+							layout="rows"
+							photos={stefanowoGallery}
+							targetRowHeight={220}
+							spacing={20}
+							onClick={({ index: current }) => setIndex2(current)}
+						/>
+						<Lightbox
+							index={index2}
+							slides={stefanowoGallery}
+							open={index2 >= 0}
+							close={() => setIndex2(-1)}
+						/>
+						{/* //inwestycja wilanow */}
+						<div>
+							<h3
+								style={{
+									color: "black",
+									marginTop: "50px",
+									marginLeft: "15px",
+								}}
+							>
+								Inwestycja Wilanów
+							</h3>
+						</div>
+						<PhotoAlbum
+							layout="rows"
+							photos={wilanowGallery}
+							targetRowHeight={220}
+							spacing={20}
+							onClick={({ index: current }) => setIndex3(current)}
+						/>
+						<Lightbox
+							index={index3}
+							slides={wilanowGallery}
+							open={index3 >= 0}
+							close={() => setIndex3(-1)}
+						/>
+					</InnerWrapper>
 				</Wrapper>
 				<Container className="content-wrapper">
 					<Lines className="content-lines-wrapper">
