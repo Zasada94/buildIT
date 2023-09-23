@@ -132,7 +132,7 @@ const Header = () => {
 											pathname === "/realizacje" ? " active" : ""
 										}`}
 									>
-										Nasze realizacje
+										Realizacje
 									</a>
 								</Link>
 							</li>

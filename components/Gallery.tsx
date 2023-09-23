@@ -22,6 +22,32 @@ const Lines = styled.section``;
 
 const Gallery = () => {
 	const [index, setIndex] = React.useState(-1);
+	const [index2, setIndex2] = React.useState(-1);
+	const [index3, setIndex3] = React.useState(-1);
+
+	const poznanGallery = [
+		{ src: `/img/gallery/poznan/1.jpg`, width: 1500, height: 1500 },
+		{ src: `/img/gallery/poznan/2.jpg`, width: 1500, height: 1500 },
+		{ src: `/img/gallery/poznan/3.jpg`, width: 1500, height: 1500 },
+		{ src: `/img/gallery/poznan/4.jpg`, width: 1500, height: 1500 },
+	];
+
+	const stefanowoGallery = [
+		{ src: `/img/gallery/stefanowo/1.jpg`, width: 2000, height: 1500 },
+		{ src: `/img/gallery/stefanowo/2.jpg`, width: 2000, height: 1126 },
+		{ src: `/img/gallery/stefanowo/3.jpg`, width: 2000, height: 1126 },
+		{ src: `/img/gallery/stefanowo/4.jpg`, width: 2000, height: 1126 },
+		{ src: `/img/gallery/stefanowo/5.jpg`, width: 2000, height: 1126 },
+		{ src: `/img/gallery/stefanowo/6.jpg`, width: 2000, height: 1126 },
+	];
+
+	const wilanowGallery = [
+		{ src: `/img/gallery/wilanow/1.jpg`, width: 1500, height: 2000 },
+		{ src: `/img/gallery/wilanow/2.jpg`, width: 1500, height: 1500 },
+		{ src: `/img/gallery/wilanow/3.jpg`, width: 1500, height: 1500 },
+		{ src: `/img/gallery/wilanow/4.jpg`, width: 768, height: 1024 },
+		{ src: `/img/gallery/wilanow/5.jpg`, width: 768, height: 1024 },
+	];
 
 	return (
 		<>
@@ -45,21 +71,65 @@ const Gallery = () => {
 				</section>
 				<Wrapper>
 					<Slider />
+					{/* //inwestycja poznan */}
 					<div>
-						<h3 style={{ color: "black", marginTop: "50px" }}>Inwestycja 1</h3>
+						<h3
+							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
+						>
+							Inwestycja Poznań
+						</h3>
 					</div>
 					<PhotoAlbum
 						layout="rows"
-						photos={slides}
+						photos={poznanGallery}
 						targetRowHeight={150}
 						onClick={({ index: current }) => setIndex(current)}
 					/>
-
 					<Lightbox
 						index={index}
-						slides={slides}
+						slides={poznanGallery}
 						open={index >= 0}
 						close={() => setIndex(-1)}
+					/>
+					{/* //inwestycja stefanowo */}
+					<div>
+						<h3
+							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
+						>
+							Inwestycja Stefanowo
+						</h3>
+					</div>
+					<PhotoAlbum
+						layout="rows"
+						photos={stefanowoGallery}
+						targetRowHeight={150}
+						onClick={({ index: current }) => setIndex2(current)}
+					/>
+					<Lightbox
+						index={index2}
+						slides={stefanowoGallery}
+						open={index2 >= 0}
+						close={() => setIndex2(-1)}
+					/>
+					{/* //inwestycja wilanow */}
+					<div>
+						<h3
+							style={{ color: "black", marginTop: "50px", marginLeft: "15px" }}
+						>
+							Inwestycja Wilanów
+						</h3>
+					</div>
+					<PhotoAlbum
+						layout="rows"
+						photos={wilanowGallery}
+						targetRowHeight={150}
+						onClick={({ index: current }) => setIndex3(current)}
+					/>
+					<Lightbox
+						index={index3}
+						slides={wilanowGallery}
+						open={index3 >= 0}
+						close={() => setIndex3(-1)}
 					/>
 				</Wrapper>
 				<Container className="content-wrapper">
