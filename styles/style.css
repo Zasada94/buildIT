@@ -3280,3 +3280,14 @@ button.mfp-arrow {
 	color: #fff;
 	background: #fff;
 }
+
+#co_zawiera {
+	margin: 15px 0;
+}
+#pakiet {
+}
+.pakiet_item {
+}
+.pakiet_item span {
+	font-weight: 700;
+}

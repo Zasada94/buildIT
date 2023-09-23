@@ -35,13 +35,12 @@ const Slider = () => {
 					<p
 						className="slide_title"
 						style={{
-							marginTop: "50px",
-							marginLeft: "15px",
+							margin: "0",
 							position: "absolute",
 							left: "20px",
 							bottom: " 20px",
 							fontFamily: "Oswald",
-							fontSize: "35px",
+							fontSize: "30px",
 							color: " White",
 						}}
 					>
@@ -53,13 +52,12 @@ const Slider = () => {
 					<p
 						className="slide_title"
 						style={{
-							marginTop: "50px",
-							marginLeft: "15px",
+							margin: "0",
 							position: "absolute",
 							left: "20px",
 							bottom: " 20px",
 							fontFamily: "Oswald",
-							fontSize: "35px",
+							fontSize: "30px",
 							color: " White",
 						}}
 					>
@@ -71,13 +69,12 @@ const Slider = () => {
 					<p
 						className="slide_title"
 						style={{
-							marginTop: "50px",
-							marginLeft: "15px",
+							margin: "0",
 							position: "absolute",
 							left: "20px",
 							bottom: " 20px",
 							fontFamily: "Oswald",
-							fontSize: "35px",
+							fontSize: "30px",
 							color: " White",
 						}}
 					>

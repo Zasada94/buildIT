@@ -45,25 +45,25 @@ const Pricing = () => {
                   <p>Mieszkania [cena brutto]</p>
                   <ul className="bullet-list">
                     <li>
-                      do 45m<sup>2</sup> - 350 PLN
+                      do 45m<sup>2</sup>  - 350 PLN
                     </li>
                     <li>
-                      46m<sup>2</sup>-70m<sup>2</sup> - 450 PLN
+                      46m<sup>2</sup> - 70m<sup>2</sup>  - 550 PLN
                     </li>
                     <li>
-                      71m<sup>2</sup>+ - 550 PLN
+                      powyżej 71m<sup>2</sup>  - 700 PLN
                     </li>
                   </ul>
                   <p>Domy [cena brutto]</p>
                   <ul className="bullet-list">
                     <li>
-                      do 100m<sup>2</sup> - 450 PLN
+                      do 100m<sup>2</sup>  - 550 PLN
                     </li>
                     <li>
-                      101m<sup>2</sup>-150m<sup>2</sup> - 550 PLN
+                      101m<sup>2</sup> - 150m<sup>2</sup>  - 750 PLN
                     </li>
                     <li>
-                      151m<sup>2</sup>-250m<sup>2</sup> - 700 PLN
+                      151m<sup>2</sup> - 250m<sup>2</sup>  - 900 PLN
                     </li>
                   </ul>
                 </div>
@@ -72,14 +72,20 @@ const Pricing = () => {
             <div className="col-md-4">
               <div className="pricing-card">
                 <p className="pricing-card-name">
-                  Porównywarka cen materiałów budowlanych
+                  Pakiet przygotowujący do budowy
                 </p>
                 <div className="pricing-card-bottom">
-                  <p>
-                    Usługa porównania cen jest darmowa. Dopiero w przypadku
-                    wyboru przedstawionej oferty, pobierana jest opłata równa
-                    3,5% brutto wartości zamówienia.
-                  </p>
+                <ul className="bullet-list">
+                    <li>
+                      do 200m<sup>2</sup> - 4500 PLN
+                    </li>
+                    <li>
+                      201m<sup>2</sup> - 300m<sup>2</sup> - 5500 PLN
+                    </li>
+                    <li>
+                      powyżej 301m<sup>2</sup> - indywidualna wycena
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
