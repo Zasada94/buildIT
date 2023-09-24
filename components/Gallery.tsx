@@ -55,22 +55,23 @@ const Gallery = () => {
 		{ src: `/img/gallery/wilanow/5.jpg`, width: 768, height: 1024 },
 	];
 
-	const renderPhoto = React.useCallback(
-		({ imageProps: { alt, style, ...rest } }: RenderPhotoProps) => (
-			<img
-				alt={alt}
-				style={{
-					...style,
-					borderRadius: "4px",
-					boxShadow:
-						"0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
-					transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-				}}
-				{...rest}
-			/>
-		),
-		[]
-	);
+	//alternative photo rendering eg with padding and shadows
+	// const renderPhoto = React.useCallback(
+	// 	({ imageProps: { alt, style, ...rest } }: RenderPhotoProps) => (
+	// 		<img
+	// 			alt={alt}
+	// 			style={{
+	// 				...style,
+	// 				borderRadius: "4px",
+	// 				boxShadow:
+	// 					"0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
+	// 				transition: "box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+	// 			}}
+	// 			{...rest}
+	// 		/>
+	// 	),
+	// 	[]
+	// );
 
 	return (
 		<>
@@ -87,7 +88,9 @@ const Gallery = () => {
 								className="col-md-6 animate-box"
 								data-animate-effect="fadeInUp"
 							>
-								<h2 className="section-title">Nasze realizacje</h2>
+								<h2 className="section-title">
+									Nasze <span className="gold">realizacje</span>
+								</h2>
 							</div>
 						</div>
 					</div>
@@ -104,7 +107,7 @@ const Gallery = () => {
 									marginLeft: "15px",
 								}}
 							>
-								Inwestycja Poznań
+								Inwestycja <span className="gold">Szczytniki</span>
 							</h3>
 						</div>
 
@@ -113,9 +116,9 @@ const Gallery = () => {
 							photos={poznanGallery}
 							targetRowHeight={220}
 							spacing={20}
-							padding={30}
+							// padding={30}
 							onClick={({ index: current }) => setIndex(current)}
-							renderPhoto={renderPhoto}
+							// renderPhoto={renderPhoto}
 						/>
 						<Lightbox
 							index={index}
@@ -132,7 +135,7 @@ const Gallery = () => {
 									marginLeft: "15px",
 								}}
 							>
-								Inwestycja Stefanowo
+								Inwestycja <span className="gold">Stefanowo</span>
 							</h3>
 						</div>
 						<PhotoAlbum
@@ -157,7 +160,7 @@ const Gallery = () => {
 									marginLeft: "15px",
 								}}
 							>
-								Inwestycja Wilanów
+								Inwestycja <span className="gold">Wilanów</span>
 							</h3>
 						</div>
 						<PhotoAlbum

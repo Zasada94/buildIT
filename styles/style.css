@@ -3281,6 +3281,12 @@ button.mfp-arrow {
 	background: #fff;
 }
 
+.swiper-pagination-bullet {
+	border: 1px solid black;
+	width: 10px !important;
+	height: 10px !important;
+}
+
 #co_zawiera {
 	margin: 15px 0;
 }
@@ -3290,4 +3296,59 @@ button.mfp-arrow {
 }
 .pakiet_item span {
 	font-weight: 700;
+}
+.section-title .gold, span.gold {
+	color: #b19777;
+}
+
+.swiper-button-prev::after {
+	content: "" !important;
+}
+.swiper-button-next::after {
+	content: "" !important;
+}
+
+.swiper-button-prev .prev {
+	width: 40px;
+	height: 40px;
+}
+.swiper-button-next .next {
+	width: 40px;
+	height: 40px;
+}
+.swiper-button-prev {
+	background-color: black;
+	width: 40px !important;
+	height: 40px !important;
+	margin: 0;
+	border-radius: 100%;
+}
+.swiper-button-next {
+	background-color: black;
+	width: 40px !important;
+	height: 40px !important;
+	margin: 0;
+	border-radius: 100%;
+}
+
+@media (max-width: 550px) {
+	.swiper-button-prev {
+		width: 30px !important;
+		height: 30px !important;
+	}
+	.swiper-button-next {
+		width: 30px !important;
+		height: 30px !important;
+	}
+	.swiper-button-prev .prev {
+		width: 30px;
+		height: 30px;
+	}
+	.swiper-button-next .next {
+		width: 30px;
+		height: 30px;
+	}
+}
+.swiper-slide p {
+	-webkit-text-stroke: black;
 }

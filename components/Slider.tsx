@@ -42,9 +42,10 @@ const Slider = () => {
 							fontFamily: "Oswald",
 							fontSize: "30px",
 							color: " White",
+							fontWeight: "500",
 						}}
 					>
-						Poznań
+						Szczytniki
 					</p>
 					<img src="/img/gallery/swiper/poznan.jpg" alt="" />
 				</div>
@@ -58,7 +59,8 @@ const Slider = () => {
 							bottom: " 20px",
 							fontFamily: "Oswald",
 							fontSize: "30px",
-							color: " White",
+							color: " white",
+							fontWeight: "500",
 						}}
 					>
 						Wilanów
@@ -76,6 +78,7 @@ const Slider = () => {
 							fontFamily: "Oswald",
 							fontSize: "30px",
 							color: " White",
+							fontWeight: "500",
 						}}
 					>
 						Stefanowo
@@ -84,21 +87,28 @@ const Slider = () => {
 				</div>
 			</div>
 			{/* <!-- If we need pagination --> */}
-			<div className="swiper-pagination"></div>
+			<div className="swiper-pagination" id="pagination"></div>
 
 			{/* <!-- If we need navigation buttons --> */}
 			<div
 				className="swiper-button-prev"
+				id="button-prev"
 				style={{
 					color: "white",
 				}}
-			></div>
+			>
+				<img src="/img/gallery/swiper/prev.png" alt="" className="prev" />
+			</div>
 			<div
 				className="swiper-button-next"
+				id="button-next"
 				style={{
 					color: "white",
 				}}
-			></div>
+			>
+				{" "}
+				<img src="/img/gallery/swiper/next.png" alt="" className="next" />
+			</div>
 		</div>
 	);
 };
