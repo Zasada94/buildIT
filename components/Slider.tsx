@@ -59,6 +59,24 @@ const Slider = () => {
 							bottom: " 20px",
 							fontFamily: "Oswald",
 							fontSize: "30px",
+							color: " White",
+							fontWeight: "500",
+						}}
+					>
+						Szczytniki
+					</p>
+					<img src="/img/gallery/swiper/poznan2.jpg" alt="" />
+				</div>
+				<div className="swiper-slide">
+					<p
+						className="slide_title"
+						style={{
+							margin: "0",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "30px",
 							color: " white",
 							fontWeight: "500",
 						}}
@@ -77,6 +95,24 @@ const Slider = () => {
 							bottom: " 20px",
 							fontFamily: "Oswald",
 							fontSize: "30px",
+							color: " white",
+							fontWeight: "500",
+						}}
+					>
+						Wilanów
+					</p>
+					<img src="/img/gallery/swiper/wilanow2.jpg" alt="" />
+				</div>
+				<div className="swiper-slide">
+					<p
+						className="slide_title"
+						style={{
+							margin: "0",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "30px",
 							color: " White",
 							fontWeight: "500",
 						}}
@@ -84,6 +120,24 @@ const Slider = () => {
 						Stefanowo
 					</p>
 					<img src="/img/gallery/swiper/stefanowo.jpg" alt="" />
+				</div>
+				<div className="swiper-slide">
+					<p
+						className="slide_title"
+						style={{
+							margin: "0",
+							position: "absolute",
+							left: "20px",
+							bottom: " 20px",
+							fontFamily: "Oswald",
+							fontSize: "30px",
+							color: " White",
+							fontWeight: "500",
+						}}
+					>
+						Stefanowo
+					</p>
+					<img src="/img/gallery/swiper/stefanowo2.jpg" alt="" />
 				</div>
 			</div>
 			{/* <!-- If we need pagination --> */}
