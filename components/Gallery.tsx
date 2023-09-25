@@ -82,12 +82,9 @@ const Gallery = () => {
 			></section>
 			<AllWrapper>
 				<section className="gallery">
-					<div className="container">
+					<div className="container" id="gallery-container">
 						<div className="row">
-							<div
-								className="col-md-6 animate-box"
-								data-animate-effect="fadeInUp"
-							>
+							<div className=" animate-box" data-animate-effect="fadeInUp">
 								<h2 className="section-title">
 									Nasze <span className="gold">realizacje</span>
 								</h2>
@@ -99,6 +96,24 @@ const Gallery = () => {
 					<Slider />
 					{/* //inwestycja poznan */}
 					<InnerWrapper>
+						<div className="video-wrapper">
+							<h3
+								style={{
+									color: "black",
+									marginTop: "50px",
+									marginLeft: "15px",
+								}}
+								className="video-title"
+							>
+								Film z <span className="gold"> realizacji</span>
+							</h3>
+							<video
+								className="video"
+								src="/img/gallery/movie.mp4"
+								muted
+								controls
+							></video>
+						</div>
 						<div>
 							<h3
 								style={{

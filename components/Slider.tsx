@@ -29,7 +29,7 @@ const Slider = () => {
 	}, []);
 
 	return (
-		<div className="swiper" style={{ maxWidth: "1140px" }}>
+		<div className="swiper" style={{ maxWidth: "1100px" }}>
 			<div className="swiper-wrapper">
 				<div className="swiper-slide">
 					<p

@@ -30,7 +30,11 @@ const Main = () => {
 						>
 							<div className="about-img">
 								<div className="img">
-									<img src="img/about.jpg" className="img-fluid" alt="" />
+									<img
+										src="img/gallery/swiper/poznan.jpg"
+										className="img-fluid"
+										alt=""
+									/>
 								</div>
 								{/* <div className="about-img-2 about-buro"></div> */}
 							</div>

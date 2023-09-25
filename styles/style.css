@@ -3297,7 +3297,8 @@ button.mfp-arrow {
 .pakiet_item span {
 	font-weight: 700;
 }
-.section-title .gold, span.gold {
+.section-title .gold,
+span.gold {
 	color: #b19777;
 }
 
@@ -3351,4 +3352,40 @@ button.mfp-arrow {
 }
 .swiper-slide p {
 	-webkit-text-stroke: black;
+}
+/* .video-bg {
+	width: 100%;
+	max-width: 1140px;
+	max-height: 720px;
+	margin: 0 auto 50px auto;
+	background-image: url("/img/gallery/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.6;
+} */
+
+.video-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.video {
+	width: 500px;
+	height: 500px;
+}
+
+@media (max-width: 768px) {
+	.video-wrapper {
+		flex-direction: column;
+		max-width: 100%;
+		height: auto;
+	}
+	.video {
+		align-self: center;
+		max-width: 100%;
+		height: auto;
+	}
 }
