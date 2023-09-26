@@ -38,10 +38,12 @@ Project was created with:
 
 ## Screens
 * gallery :computer:
-![Screenshot](./public/img/screens/screen1.jpg)
+  
+![Screenshot](./public/img/screens/screen2.jpg)
 
 * gallery :iphone:
-![Screenshot](./public/img/screens/screen2.jpg)
+  
+![Screenshot](./public/img/screens/screen1.jpg)
 
 
 
